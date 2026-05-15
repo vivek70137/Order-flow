@@ -25,6 +25,7 @@ user management
     # Click Element    xpath=//label[normalize-space()="Access to Order History"]
     Execute Javascript    document.getElementById("roles4").click();
 invoice
+    wait click    xpath://a[@title="Invoice History"]      
     Click Element    xpath://a[@title="Invoice History"]
     Click Element    xpath://button[@aria-owns="bs-select-1"]
     Click Element    xpath://a[@id="bs-select-1-2"]
@@ -38,7 +39,7 @@ report
 
     Wait Until Element Is Enabled    xpath://button[@aria-owns="bs-select-1"]    20s
     Click Element    xpath://button[@aria-owns="bs-select-1"]
-    Wait Until Element Is Enabled    xpath://span[text()='Order Analysis']
+    Wait Until Element Is Enabled    xpath://span[text()='Order Analysis']    20s
     Click Element    xpath://span[text()='Order Analysis']
     Click Element    xpath://button[@aria-owns="bs-select-4"]
     Wait Until Element Is Visible    id=bs-select-4-1    10s
@@ -54,12 +55,12 @@ report
     Click Element    xpath://button[@aria-owns="bs-select-2"]
     Click Element    id=bs-select-2-6
     Click Element    xpath://button[@aria-owns="bs-select-3"]
-    Click Element    id:bs-select-3-2
+    Click Element    id=bs-select-3-2
     Click Element    xpath://button[@aria-owns="bs-select-4"]
     Click Element    id=bs-select-4-2
 
     Click Element    xpath://a[@title="Home"]
-    sleep    2s
+    
 template
     Wait Until Element Is Enabled    xpath://a[@title="Templates"]    15s
     Click Element    xpath://a[@title="Templates"]
@@ -72,8 +73,9 @@ template
     Wait Until Element Is Enabled    id:productNumber
     Click Element    id:productNumber
     Click Element    xpath://a[@title="Home"]
-    sleep    2s
+    
 sellout
+    wait click    xpath://a[@title="Sellout"]   
     Click Element    xpath://a[@title="Sellout"]
     Click Element    xpath://button[normalize-space(.)='Upload Sellout Report']
     Wait Until Element Is Visible    xpath://button[normalize-space(.)='Close']
@@ -85,7 +87,7 @@ sellout
 services
     wait click    xpath://a[@title="Services"]
     Click Element    xpath://a[@title="Services"]
-    Click Element    //p[normalize-space(text()) = 'Add Indirect Customer' and @class="firstline"]
+    Click Element    xpath=//p[normalize-space(text()) = 'Add Indirect Customer' and @class="firstline"]
     Input Text    id=customerName    shiv
     Click Element    id=radioCnpj
     wait click    xpath://button[@data-id="customerType"]
