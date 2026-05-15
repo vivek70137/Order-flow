@@ -62,7 +62,7 @@ report
     Click Element    xpath://a[@title="Home"]
     
 template
-    Wait Until Element Is Enabled    xpath://a[@title="Templates"]    15s
+    wait click    xpath://a[@title="Templates"]
     Click Element    xpath://a[@title="Templates"]
     Wait Until Element Is Enabled    id=createTemplate
     Click Element    id=createTemplate
