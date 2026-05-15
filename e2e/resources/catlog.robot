@@ -140,7 +140,9 @@ Consignment Issue and indirectCustomer-agree
     Click Element    xpath://button[@aria-owns="bs-select-2"]
     Wait Until Element Is Visible    id=bs-select-2-2    10s
     Click Element    id=bs-select-2-2
+    wait click    id=consignmentIssue-agree
     Click Element    id=consignmentIssue-agree
+    wait click    id=consignment_back
     Click Element    id=consignment_back
 
 close
