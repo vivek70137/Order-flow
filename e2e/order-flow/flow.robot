@@ -6,6 +6,8 @@ Suite Setup     Open Login Page
 Suite Teardown  Close Browser
 *** Test Cases ***
 login check
+    Set Selenium Timeout    20s
+    Set Selenium Speed      0.5s
     Login With Credentials
     close popup
 #    change account
