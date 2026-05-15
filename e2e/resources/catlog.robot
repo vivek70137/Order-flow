@@ -104,15 +104,18 @@ customer arg
     ff    bs-select-3    bs-select-3-1
     ff    bs-select-4    bs-select-4-1
 Consignment Issue and indirectCustomer-agree
+    wait click    id=state
     Input Text    id=state    hgfgh
     Input Text    id=city    kjhg
     Input Text    id=address    lkjhg
     Input Text    id=neighborhood    jhgf
     Input Text    id=zip    lkjhg
+    wait click    id=indirectCustomer-agree
     Click Element    id=indirectCustomer-agree
     Go Back
+    wait click    xpath://p[@class="firstline" and normalize-space(text())='Consignment Issue']
     Click Element    xpath://p[@class="firstline" and normalize-space(text())='Consignment Issue']
-    Wait Until Element Is Visible    id=CName
+    Wait Until Element Is Visible    id=CName    20s
     Input Text    id=CName    mnb
     Input Text    id=hospital    jhg
     Input Text    id=ContactName    jhgfc
@@ -122,14 +125,18 @@ Consignment Issue and indirectCustomer-agree
     Input Text    id=shipto    nbvcvb
     Input Text    id=residentialQuarter    nbvcvb
     Input Text    id=city    nbvcvb
+    wait click     xpath://button[@aria-owns="bs-select-1"]
     Click Element    xpath://button[@aria-owns="bs-select-1"]
     Click Element    id=bs-select-1-2
     Input Text    id=zipCode    nbvcvb
+    wait click    id=datepickerform0 
     Input Text    id=datepickerform0    nbvcvb
     Input Text    id=POnum    01/06/2020
     Input Text    id=patient    nbvcvb
     Input Text    id=doctor    nbvcvb
+    wait click    id=datepickerform1
     Input Text    id=datepickerform1    08/07/2025
+    wait click    xpath://button[@aria-owns="bs-select-2"]
     Click Element    xpath://button[@aria-owns="bs-select-2"]
     Wait Until Element Is Visible    id=bs-select-2-2    10s
     Click Element    id=bs-select-2-2
