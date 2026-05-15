@@ -27,8 +27,7 @@ add to cart by catalog
     Click Element    xpath://a[text()='ZAVESCA 100MG 90 CAPS. BR']
     wait click    xpath://input[@id="417791" and @value="ADD TO CART"]
     Click Element    xpath://input[@id="417791" and @value="ADD TO CART"]
-#    wait click      class=bi bi-cart-fill
-    Wait Until Element Is Visible    xpath://button[normalize-space()='Validate']    20s
+    wait click      xpath://button[normalize-space()='Validate']    
     Click Element    xpath://button[normalize-space()='Validate']
     wait click    xpath://button[normalize-space()='Continue to Shipping']
     Click Element    xpath://button[normalize-space()='Continue to Shipping']
